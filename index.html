@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Your Website</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            margin-bottom: 60px; /* Adjusted to make space for the footer */
+        }
+
+        .navbar {
+            background-color: #343a40;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar-brand {
+            color: #fff;
+            font-size: 1.5em;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        .nav-item {
+            margin: 0 10px;
+        }
+
+        .nav-link {
+            color: #fff !important;
+            font-weight: bold;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .nav-link::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2px;
+            bottom: -1px;
+            left: 0;
+            background-color: #007bff;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: 0.3s ease-in-out;
+        }
+
+        .nav-link:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+
+        .dropdown-menu {
+            background-color: #343a40;
+            border: 1px solid #343a40;
+        }
+
+        .dropdown-item {
+            color: #fff !important;
+        }
+
+        /* Add this style to override the color on hover */
+        .dropdown-item:hover {
+            background-color: #007bff;
+            color: #fff !important;
+        }
+
+        /* Sliding text styles */
+        .sliding-text {
+            text-align: center;
+            padding: 20px;
+            background-color: #007bff;
+            color: #fff;
+            font-size: 1.2em;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        /* Card styles */
+        .card {
+            margin: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-img-top {
+            width: 100%;
+            height: 150px; /* Adjust the height as needed */
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-link {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            color: #007bff;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .card-link:hover {
+            text-decoration: underline;
+        }
+
+        .card-text {
+            margin-top: 10px;
+        }
+
+        /* Footer styles */
+        .footer {
+            background-color: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        .social-icons img {
+            width: 30px; /* Adjust the width as needed */
+            margin: 0 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">Language Learning Website and Application</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Programming Languages
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#" onclick="openPDF('java.pdf')">Java</a>
+                        <a class="dropdown-item" href="#" onclick="openPDF('python.pdf')">Python</a>
+                        <a class="dropdown-item" href="#" onclick="openPDF('php.pdf')">PHP</a>
+                        <a class="dropdown-item" href="#" onclick="openPDF('c.pdf')">C</a>
+                    </div>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Sliding text -->
+    <div class="sliding-text">
+        <marquee behavior="scroll" direction="left" scrollamount="10">
+            Welcome To the language learning website and application. From our platform, you can learn Java, Python, PHP, C.
+        </marquee>
+    </div>
+
+    <!-- Card Section -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="python.jpg" class="card-img-top" alt="Python Image">
+                    <div class="card-body">
+                        <h5 class="card-title">Python</h5>
+                        <a href="https://www.python.org/about/#" class="card-link">About Python </a>
+                        <p class="card-text">Start your journey into the world of Python programming.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="c.jpg" class="card-img-top" alt="c Image">
+                    <div class="card-body">
+                        <h5 class="card-title">c</h5>
+                        <a href="https://en.wikipedia.org/wiki/C_(programming_language)#" class="card-link">About c</a>
+                        <p class="card-text">Explore the fundamentals of programming with the powerful C language.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="php.jpg" class="card-img-top" alt="PHP Image">
+                    <div class="card-body">
+                        <h5 class="card-title">PHP</h5>
+                        <a href="https://en.wikipedia.org/wiki/PHP" class="card-link">About PHP</a>
+                        <p class="card-text">Master the art of web development with PHP and build dynamic websites.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; 2023 IP. All rights reserved.</p>
+        <div class="social-icons">
+           <a href="https://www.linkedin.com/"> <img src="linkedin.png" alt="LinkedIn"></a>
+            <a href="https://twitter.com/"><img src="twitter.png" alt="Twitter"></a>
+            <a href="https://www.instagram.com/"><img src="instagram.png" alt="Instagram"></a>
+            <a href="https://www.facebook.com/"><img src="facebook.png" alt="Facebook"></a>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script>
+        function openPDF(pdfPath) {
+            // Assuming the PDFs are in the same directory as your HTML file
+            var pdfURL = pdfPath;
+            // Open the PDF in a new window or tab
+            window.open(pdfURL, '_blank');
+        }
+    </script>
+    
+</body>
+
+</html>
